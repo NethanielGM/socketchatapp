@@ -1,0 +1,220 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(315deg, #044f48, #2a7561);
+  background: linear-gradient(135deg, #044f48, #2a7561);
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.3;
+  overflow: hidden;
+}
+
+.bg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: url("https://images.unsplash.com/photo-1451186859696-371d9477be93?crop=entropy&fit=crop&fm=jpg&h=975&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1925") no-repeat 0 0;
+  -webkit-filter: blur(80px);
+  filter: blur(80px);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+/*--------------------
+Chat
+--------------------*/
+.chat {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 80vh;
+  max-height: 500px;
+  margin-top: 100px;
+  z-index: 2;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.chat-header {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  max-height: 20vh;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  z-index: 2;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+
+}
+
+/*--------------------
+Chat Title
+--------------------*/
+.chat-title {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 45px;
+  -ms-flex: 0 1 45px;
+  flex: 0 1 45px;
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 10px 10px 50px;
+}
+
+.users-title {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 45px;
+  -ms-flex: 0 1 45px;
+  flex: 0 1 45px;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 0px 0px 0px 50px;
+}
+
+.chat-title h1,
+.chat-title h2 {
+  font-weight: normal;
+  margin: 0 0 0 25px;
+  padding: 0;
+}
+
+/*--------------------
+Messages
+--------------------*/
+.messages {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  color: rgba(255, 255, 255, 0.5);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.messages .message {
+  clear: both;
+  float: left;
+  padding: 7px 10px 7px;
+  border-radius: 10px 10px 10px 0;
+  background: rgba(0, 0, 0, 0.3);
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-left: 35px;
+  position: relative;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/*--------------------
+Message Box
+--------------------*/
+.message-box {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 40px;
+  -ms-flex: 0 1 40px;
+  flex: 0 1 40px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  position: relative;
+}
+
+.message-box .message-input {
+  background: none;
+  border: none;
+  outline: none !important;
+  resize: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 15px;
+  height: 50px;
+  width: 80vw;
+}
+
+.message-box .message-submit {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  background: #248A52;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+
+.btn-delete {
+  background: #ff0000;
+  color: white;
+  position: absolute;
+  z-index: 1;
+  top: 25px;
+  right: 10px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 10px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+
+.message-box .message-submit:hover {
+  background: #1D7745;
+}
+
+
+.btn-delete:hover {
+  background: #9f2323;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat App</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Open+Sans'>
+  <script defer src="http://localhost:3000/socket.io/socket.io.js"></script>
+  <script type="module" defer src="script.js"></script>
+</head>
+
+<body>
+  <div style="overflow-y: scroll;" class="chat-header">
+    <h1 class="users-title">Active Users</h1>
+    <div id="users-container"></div>
+  </div>
+  <div class="chat">
+    <div class="chat-title message-box">
+      <h1>Chat Room</h1>
+      <h1 id="user-name"></h1>
+      <form id="delete-button">
+        <button type="submit" class="btn-delete" id="delete-button">Delete History</button>
+      </form>
+    </div>
+    <div style="overflow-y: scroll;" class="messages">
+      <div id="name-container"></div>
+      <div id="message-container"></div>
+    </div>
+    <form class="message-box" id="send-container">
+      <textarea type="text" class="message-input" id="message-input" placeholder="Type message..."></textarea>
+      <button type="submit" class="message-submit" id="send-button">Send</button>
+    </form>
+  </div>
+  <div class="bg"></div>
+</body>
+
+</html>
