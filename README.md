@@ -1,5 +1,8 @@
 # SocketChatApp
 
-# npm i
-# npm run devStart 
-# open html file (better with live server)
+# npm install
+# npm install http-server -g
+# npm run serverStart
+# npm run clientStart
+
+# html will run lcally on 8080
